@@ -6,9 +6,11 @@ $app->get('/', function () use ($app, $config) {
 
 $app->post('/', function () use ($app, $config) {
 
-    $payload = $app->request()->getBody();
+    $json = $app->request()->getBody();
 
-    $json = json_decode($payload);
+    $payload = json_decode($json);
 
-    $app->log->info("payload : " . $payload);
+    $app->log->info("payload : " . $json);
+    $app->log->info("********************************");
+    $app->log->info("payload repository name : " . $payload->repository->name);
 });
