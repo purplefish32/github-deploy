@@ -23,8 +23,20 @@ $app->post('/', function () use ($app, $config) {
 
     $app->log->info("payload branch : " . $branch);
 
-    $app->log->info("deployer : " . $config['projects'][$payload->repository->name][$branch]['base_path']);
+    $url = $config['projects'][$payload->repository->name][$branch]['url'];
+
+    $app->log->info("deployer : " . $url);
 
 
+    $ch = curl_init();
+
+    curl_setopt($ch,CURLOPT_URL,$url);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+
+    $output=curl_exec($ch);
+
+    curl_close($ch);
+
+    $app->log->info("output : " . $output);
 
 });
