@@ -2,6 +2,6 @@
 
 $config['projects'] = array(
     'default' => array(
-	'master' => array('base_path' => /var/www/default/master/)
+	'master' => array('base_path' => '/var/www/default/master/')
     )
 );
