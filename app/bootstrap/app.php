@@ -1,6 +1,6 @@
 <?php
 
-$app->post('/', function () use ($app, $config) {
+$app->get('/', function () use ($app, $config) {
 
     $payload = $app->request()->getBody();
 
