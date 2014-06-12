@@ -1,0 +1,7 @@
+<?php
+
+$config['projects'] = array(
+    'default' => array(
+	'master' => array('base_path' => /var/www/default/master/)
+    )
+);
