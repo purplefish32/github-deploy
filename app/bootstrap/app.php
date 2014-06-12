@@ -2,7 +2,7 @@
 
 $app->post('/', function () use ($app, $config) {
 
-    $payload = $app->request()->getBody()
+    $payload = $app->request()->getBody();
 
     $json = json_decode($payload);
 
