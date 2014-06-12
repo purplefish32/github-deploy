@@ -13,4 +13,6 @@ $app->post('/', function () use ($app, $config) {
     $app->log->info("payload : " . $json);
     $app->log->info("********************************");
     $app->log->info("payload repository name : " . $payload->repository->name);
+    $app->log->info("********************************");
+    $app->log->info("payload ref : " . $payload->ref);
 });
