@@ -23,4 +23,8 @@ $app->post('/', function () use ($app, $config) {
 
     $app->log->info("payload branch : " . $branch);
 
+    $app->log->info("deployer : " . $config['projects'][$payload->repository->name][$branch]['base_path']);
+
+
+
 });
