@@ -10,5 +10,5 @@ $app->post('/', function () use ($app, $config) {
 
     $json = json_decode($payload);
 
-    $app->log->info("payload : " . $json);
+    $app->log->info("payload : " . $payload);
 });
